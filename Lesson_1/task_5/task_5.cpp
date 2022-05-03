@@ -7,10 +7,7 @@ int main()
 	int a = 0;
 	int b = 0;
 	int c = 0;
-	int Discriminant = 0;
-	int x1 = 0;
-	int x2 = 0;
-
+	
 	cout << "Enter a: ";
 	cin >> a;
 	cout << "Enter b: ";
@@ -19,18 +16,14 @@ int main()
 	cin >> c;
 	cout << endl;
 
-	Discriminant = b * b - 4 * a * c;
-
-	if (Discriminant > 0) {
-		x1 = (-b + sqrt(Discriminant)) / (2 * a);
-		x2 = (-b - sqrt(Discriminant)) / (2 * a);
-		cout << "x1 = " << x1 << endl << "x2 = " << x2 << endl;
+	if ((b * b - 4 * a * c) > 0) {
+		cout << "x1 = " << (-b + sqrt(b * b - 4 * a * c)) / (2 * a) << endl;
+		cout << "x2 = " << (-b - sqrt(b * b - 4 * a * c)) / (2 * a) << endl;
 	}
-	if (Discriminant == 0) {
-		x1 = (-b + sqrt(Discriminant)) / (2 * a);
-		cout << "x1 = " << x1 << endl;
+	if ((b * b - 4 * a * c) == 0) {
+		cout << "x1 = " << (-b + sqrt(b * b - 4 * a * c)) / (2 * a) << endl;
 	}
-	if (Discriminant < 0) {
+	if ((b * b - 4 * a * c) < 0) {
 		cout << "No roots!!!" << endl;
 	}
 }
