@@ -11,7 +11,7 @@ int main()
 	cin >> num;
 	int num_1 = num;
 
-	for (int i = 0; num_1 > 0; i++)
+	while (num_1 > 0)
 	{
 		if (num_1 % 10 % 2 == 0)
 			sum += num_1 % 10;
