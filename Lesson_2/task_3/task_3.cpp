@@ -10,10 +10,9 @@ int main()
 	cout << "Enter please number: ";
 	cin >> num;
 	cout << endl;
-	int num1 = num;
-	int last_num = num1 % 10;
+	int last_num = num % 10;
 
-	while (num1 != 0)
+	for (int num1 = num; num1 != 0;)
 	{
 		if (num1 % 10 == num1 / 10 % 10)
 			hash_code += num1 % 10;
